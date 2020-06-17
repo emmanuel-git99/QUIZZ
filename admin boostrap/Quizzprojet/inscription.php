@@ -1,3 +1,9 @@
+<?php
+ include('DB/manager.php') ;
+ ?>
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>

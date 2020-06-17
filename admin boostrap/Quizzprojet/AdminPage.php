@@ -1,23 +1,5 @@
 <?php 
- $pdd=new PDO('mysql:host=127.0.0.1;dbname=quizz','root','');
- if(isset($_POST['inscription'])){
-
-    if (!empty($_POST['prenom']) AND !empty($_POST['nom']) AND !empty($_POST['mdp']) AND !empty($_POST['login']) AND !empty($_POST['email'])AND !empty($_POST['mdp2'])) {
-    	# code...
-    	$prenom = htmlspecialchars($_POST['prenom']);
-    	$nom = htmlspecialchars($_POST['nom']);
-    	$mdp = sha1(($_POST['mdp']));
-    	$login = htmlspecialchars($_POST['login']);
-    	$email = htmlspecialchars($_POST['email']);
-    	$mdp2 = sha1(($_POST['mdp2']));
-    }else{
-    	$erreur = 'Tous les champs doivent etre remplis';
-    }
-    
-
- }
-
-
+ include('DB/manager.php');
 
 ?>
 <!DOCTYPE html>
@@ -119,11 +101,15 @@
                         <div class="div_input_1 "><input class="iptxt_1 ippwd_1" error="error_2"  type="text" name="nom" value="" /></div>
                         <small for="login">Login</small><small id="error_3" class="input_alert float_r"> </small>
                         <span class="error" id="erreurlogin"></span>
-                        <div class="div_input_1 "><input class="iptxt_1 ippwd_1" error="error_3"  type="text" name="login" /></div>
+                        <div class="div_input_1 "><input class="iptxt_1 ippwd_1" error="error_3"  type="text" name="login" value="<?php if(isset($login)){
+                        	echo $login;
+                        } ?>" /></div>
                         <small for="mdp">Password</small><small id="error_4" class="input_alert float_r"> </small>
-                        <div class="div_input_1 "><input class="iptxt_1 ippwd_1"  error="error_4" id="mdp"  type="password" name="mdp" /></div>
+                        <div class="div_input_1 "><input class="iptxt_1 ippwd_1"  error="error_4" id="mdp"  type="password" name="mdp"  /></div>
                          <small for="email">Email</small><small id="error_3" class="input_alert float_r"> </small>
-                          <div class="div_input_1 "><input class="iptxt_1 ippwd_1"  error="error_4" id="email"  type="email" name="email"  /></div>
+                          <div class="div_input_1 "><input class="iptxt_1 ippwd_1"  error="error_4" id="email"  type="email" name="email" value="<?php if(isset($email)){
+                        	echo $email;
+                        } ?>"  /></div>
                          <small for="mdp2">Confirm password</small><small id="pwd_ctxt" class="input_alert float_r"></small>
                         <div class="div_input_1 "><input class="iptxt_1 ippwd_1" type="password" id="pwd_c" name="mdp2" /></div>
                         <div class="div_input_1 "><label class="float_f">Avatar</label><label class="file float_r"  for="imgUser">choisir une image<input class="fileBtn_1 float_r" error="error_f" type="file" onchange="prevUpload()" name="imgUser" id="imgUser" accept="image/png, image/jpeg"/></label></div>
