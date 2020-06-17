@@ -13,7 +13,7 @@
         <header>
             <nav>
                 <div class="logo"></div>
-                <div style="" class="titre">Le plaisir de jouer</div>
+                <div style="" class="titre">Le plaisir de jouer</div> 
                 <img src="image/logo.png">
             </nav>
                     </header>
@@ -63,7 +63,7 @@
             </div>
             <div class="div_menu"> 
         
-                <a href="Liste_Question"><div class="li  sm_1" style="background-image:url(image/ic-liste.png);"><span>Liste Questions</span></div></a>
+                <a href="Liste_Question.php"><div class="li  sm_1" style="background-image:url(image/ic-liste.png);"><span>Liste Questions</span></div></a>
                 <a href="AdminPage.php"><div class="li  sm_2" style="background-image: url(image/ic-ajout.png);" >Créer Admin</div></a>
                 <a href="Liste_Joueur.php"><div class="li  sm_3" style="background-image:url(image/ic-liste-active.png);">Liste joueurs</div></a>
                 <a href="Creer_Question.php"> <div class="li  sm_4 "style="background-image:url(image/ic-ajout.png);">Créer Questions</div></a>
