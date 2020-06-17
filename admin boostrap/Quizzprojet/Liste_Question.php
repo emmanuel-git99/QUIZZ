@@ -49,11 +49,11 @@
         <div class="box_menu_1">
             <div class="div_avatar_1">
                 <div class="img_avatar_1">
-                    <img class="w_70_h_70" alt="av" src=" assets/icones/ada.jpeg"/>
+                    <img class="w_70_h_70" alt="av" src="image/afri.png"/>
                 </div>
                 <div class="float_l ">
                     <br><br>
-                    <a href="index.php?origin=admin&action=profilAdmin">
+                    <a href="profil.php">
                         <div>&nbsp;&nbsp;&nbsp;<label class="lab_prenom ">emmanuel</label></div>
                         <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label class="lab_nom">toukas</label></div>
                     </a>
